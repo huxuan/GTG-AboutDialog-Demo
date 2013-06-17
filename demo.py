@@ -16,8 +16,6 @@ PATH_ABOUT_UI = 'about.ui'
 class About(Gtk.Window):
     """docstring for About"""
     def __init__(self):
-        Gtk.Window.__init__(self, title="Dialog Example")
-
         self.builder = Gtk.Builder()
         self.builder.add_from_file(PATH_ABOUT_UI)
 
@@ -51,7 +49,6 @@ class About(Gtk.Window):
 def main():
     """docstring for main"""
     about = About()
-    about.connect("delete-event", Gtk.main_quit)
     about.show()
     Gtk.main()
 
